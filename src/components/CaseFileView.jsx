@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { CheckCircle, XCircle, Clock, FileText, User,
-         Banknote, ChevronRight, ExternalLink, Loader2, Sparkles, Shield, Lightbulb } from 'lucide-react'
+         Banknote, ChevronRight, ExternalLink, Loader2, Sparkles, Lock, Lightbulb } from 'lucide-react'
 import { CASES, SUSPECT, NURA_FINDINGS } from '../data/mockData.js'
 import MiniRiskGraph from './MiniRiskGraph.jsx'
 
@@ -199,7 +199,7 @@ export default function CaseFileView({ onNavigate }) {
         {/* AML System Assessment */}
         <div className="bg-[#0a1220] border border-[#0f1e33] rounded-xl p-4 mb-4">
           <div className="flex items-center gap-2 mb-3">
-            <Shield size={13} className="text-slate-500" />
+            <Lock size={13} className="text-slate-500" />
             <span className="text-[11px] text-slate-500 uppercase tracking-wider font-medium">Legacy AML System Assessment</span>
             <span className="ml-auto text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded font-medium">
               System: No Flags
