@@ -1,10 +1,14 @@
-import { LayoutDashboard, Share2, FileText, BookOpen, Settings, Shield, Lightbulb } from 'lucide-react'
+import { LayoutDashboard, Share2, FileText, BookOpen, Settings, Shield, Lightbulb, Building2 } from 'lucide-react'
 
 const NAV = [
   { id: 'case',      icon: LayoutDashboard, label: 'Case File',      badge: null },
   { id: 'graph',     icon: Share2,          label: 'Risk Graph',     badge: '7'  },
   { id: 'documents', icon: FileText,         label: 'Documents',      badge: '3'  },
   { id: 'notes',     icon: BookOpen,         label: 'Analyst Notes',  badge: null },
+]
+
+const DEMOS = [
+  { id: 'bank', icon: Building2, label: 'Bank Hapoalot', badge: null },
 ]
 
 export default function NavSidebar({ activeView, onNavigate }) {
@@ -48,6 +52,27 @@ export default function NavSidebar({ activeView, onNavigate }) {
                 {item.badge}
               </span>
             )}
+          </button>
+        ))}
+      </nav>
+
+      {/* Demo clients section */}
+      <div className="px-4 mt-4 mb-2 text-[10px] text-slate-700 uppercase tracking-widest font-medium">
+        Client Demos
+      </div>
+      <nav className="flex flex-col gap-0.5 px-2">
+        {DEMOS.map(item => (
+          <button
+            key={item.id}
+            onClick={() => onNavigate(item.id)}
+            className={`relative flex items-center gap-3 px-3 py-2.5 rounded-lg text-[13px] font-medium transition-all text-left ${
+              activeView === item.id
+                ? 'bg-[#0e1e38] text-cyan-400'
+                : 'text-slate-500 hover:text-slate-300 hover:bg-[#0c1526]'
+            }`}
+          >
+            <item.icon size={15} />
+            <span>{item.label}</span>
           </button>
         ))}
       </nav>
