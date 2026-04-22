@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BookOpen, Tag, Link, Plus, Loader2, CheckCircle, Sparkles, X } from 'lucide-react'
+import { BookOpen, Tag, Link, Plus, Loader2, CheckCircle, Sparkles, X, Lightbulb } from 'lucide-react'
 import { ANALYST_NOTES } from '../data/mockData.js'
 
 function NoteCard({ note }) {
@@ -167,8 +167,8 @@ export default function AnalystNotesView() {
       <div className="w-80 flex-shrink-0 bg-[#060b17] border-l border-[#1a2d45] flex flex-col">
         <div className="px-4 py-3 border-b border-[#1a2d45]">
           <div className="flex items-center gap-2">
-            <div className="w-5 h-5 rounded bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0">
-              N
+            <div className="w-5 h-5 rounded bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center flex-shrink-0">
+              <Lightbulb size={11} className="text-white" />
             </div>
             <span className="text-[12px] font-semibold text-slate-300">Add Analyst Insight</span>
           </div>

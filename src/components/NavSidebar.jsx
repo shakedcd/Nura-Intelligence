@@ -1,4 +1,4 @@
-import { LayoutDashboard, Share2, FileText, BookOpen, Settings, Shield } from 'lucide-react'
+import { LayoutDashboard, Share2, FileText, BookOpen, Settings, Shield, Lightbulb } from 'lucide-react'
 
 const NAV = [
   { id: 'case',      icon: LayoutDashboard, label: 'Case File',      badge: null },
@@ -12,8 +12,8 @@ export default function NavSidebar({ activeView, onNavigate }) {
     <div className="w-[200px] flex-shrink-0 bg-[#060b16] border-r border-[#111f36] flex flex-col py-4">
       {/* Logo */}
       <div className="px-4 mb-6 flex items-center gap-3">
-        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-          N
+        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center flex-shrink-0">
+          <Lightbulb size={16} className="text-white" />
         </div>
         <div>
           <div className="text-[13px] font-semibold text-white tracking-wide">NURA</div>
