@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { CheckCircle, AlertTriangle, XCircle, Clock, FileText, User, Building2,
-         Banknote, MapPin, ChevronRight, ExternalLink, Loader2, Sparkles, RefreshCw } from 'lucide-react'
+import { CheckCircle, XCircle, Clock, FileText, User,
+         Banknote, ChevronRight, ExternalLink, Loader2, Sparkles, Shield } from 'lucide-react'
 import { CASES, SUSPECT, NURA_FINDINGS } from '../data/mockData.js'
 import MiniRiskGraph from './MiniRiskGraph.jsx'
 
